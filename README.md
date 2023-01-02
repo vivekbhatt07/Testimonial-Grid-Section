@@ -15,6 +15,8 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 ## Overview
 
 ### Screenshot
+![desktop-preview](https://user-images.githubusercontent.com/93856336/210266815-dcb22546-292b-488e-b3b8-f328e437c20f.jpg)
+![mobile-design](https://user-images.githubusercontent.com/93856336/210266834-695f301c-21d1-43f1-8e20-7f947557ffeb.jpg)
 
 ### Links
 
