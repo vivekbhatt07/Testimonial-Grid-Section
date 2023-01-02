@@ -20,11 +20,16 @@ body {
   font-weight: var(--medium-weight);
   display: flex;
   min-height: 100vh;
+  background-color: hsl(0, 0%, 81%);
+}
+
+p {
+  font-size: 0.8125;
 }
 
 .cards-wrapper {
   width: 90%;
-  margin: auto;
+  margin: 5em auto;
   display: grid;
   gap: 2em;
 }
@@ -35,7 +40,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1em;
 }
 
 .card-one {
@@ -61,10 +66,14 @@ body {
   display: flex;
   justify-content: justify-content;
   align-items: center;
+  width: 40px;
+  height: 40px;
 }
 
 .card-img {
   border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .card-head {
@@ -85,40 +94,32 @@ body {
 
 .card-primary {
   font-weight: var(--semibold-weight);
-  font-size: 21px;
+  font-size: 1.25rem;
 }
 
 .card-secondary {
   font-weight: var(--medium-weight);
-  font-size: 13px;
+  font-size: 0.8125rem;
   opacity: 70%;
+  line-height: 140%;
 }
 
-.card-three .card-primary,
-.card-five .card-primary,
-.card-five .card-secondary,
-.card-three .card-secondary {
-  color: #000;
-}
-
-.card-title-name,
-.card-title-status {
+.dark-card .card-title-name,
+.dark-card .card-title-status {
   color: hsl(0, 0%, 81%);
 }
 
-.card-title-status {
+.dark-card .card-title-status {
   opacity: 50%;
 }
 
-.card-three .card-title-name,
-.card-five .card-title-name,
-.card-three .card-title-,
-.card-five .card-title-status {
+.light-card .card-title-name,
+.light-card .card-title-status,
+.light-card p {
   color: #000;
 }
 
-.card-three .card-title-status,
-.card-five .card-title-status {
+.light-card .card-title-status {
   opacity: 70%;
 }
 
@@ -130,8 +131,9 @@ body {
 
 @media (min-width: 1280px) {
   .cards-wrapper {
-    display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+    margin: auto;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
       "cardOne cardOne cardTwo cardFive"
       "cardThree cardFour cardFour cardFive";
