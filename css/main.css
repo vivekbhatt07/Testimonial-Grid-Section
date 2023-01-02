@@ -110,6 +110,18 @@ body {
   opacity: 50%;
 }
 
+.card-three .card-title-name,
+.card-five .card-title-name,
+.card-three .card-title-,
+.card-five .card-title-status {
+  color: #000;
+}
+
+.card-three .card-title-status,
+.card-five .card-title-status {
+  opacity: 70%;
+}
+
 .card-body {
   display: flex;
   flex-direction: column;
