@@ -1,7 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  --primary-font: "Barlow Semi Condensed", sans-serif;
+  --medium-weight: 500;
+  --semibold-weight: 600;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-size: 0.8125rem;
+  font-family: var(--primary-font);
+  font-weight: var(--medium-weight);
+  display: flex;
+  min-height: 100vh;
+}
+
+.cards-wrapper {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  gap: 2em;
+}
+
+.card {
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.card-one {
+  background-color: hsl(263, 55%, 52%);
+}
+
+.card-two {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.card-three,
+.card-five {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card-four {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.card-img-wrap {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: justify-content;
+  align-items: center;
+}
+
+.card-img {
+  border-radius: 50%;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.card-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-primary,
+.card-secondary {
+  color: #fff;
+}
+
+.card-primary {
+  font-weight: var(--semibold-weight);
+  font-size: 21px;
+}
+
+.card-secondary {
+  font-weight: var(--medium-weight);
+  font-size: 13px;
+  opacity: 70%;
+}
+
+.card-three .card-primary,
+.card-five .card-primary,
+.card-five .card-secondary,
+.card-three .card-secondary {
+  color: #000;
+}
+
+.card-title-name,
+.card-title-status {
+  color: hsl(0, 0%, 81%);
+}
+
+.card-title-status {
+  opacity: 50%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+@media (min-width: 1280px) {
+  .cards-wrapper {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "cardOne cardOne cardTwo cardFive"
+      "cardThree cardFour cardFour cardFive";
+  }
+
+  .card-one {
+    grid-area: cardOne;
+  }
+
+  .card-two {
+    grid-area: cardTwo;
+  }
+
+  .card-three {
+    grid-area: cardThree;
+  }
+
+  .card-four {
+    grid-area: cardFour;
+  }
+
+  .card-five {
+    grid-area: cardFive;
+  }
 }
